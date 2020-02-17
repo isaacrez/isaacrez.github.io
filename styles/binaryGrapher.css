@@ -1,0 +1,51 @@
+
+
+div.inputBar {
+	display: flex;
+	justify-content: center;
+}
+
+div.inputBar > input {
+	margin: auto;
+	max-height: 30px;
+}
+
+div.inputBar > select {
+	margin: auto;
+	max-height: 30px;
+}
+
+div.outputDisplay {
+	display: grid;
+	grid-template-columns: 90% 10%
+}
+
+div.outputDisplay > p {
+	text-align: center;
+}
+
+div.overlapContainer {
+	position: relative;
+	height: 300px;
+}
+
+div.overlapContainer > canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	z-index: 2;
+}
+
+div.overlapContainer > img {
+	position: absolute;
+	top: 50%;
+	margin-top: -75px;
+	left: 50%;
+	margin-left: -75px;
+
+	height: 150px;
+	width: auto;
+
+	opacity: 0.25;
+}

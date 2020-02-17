@@ -1,0 +1,187 @@
+<html>
+
+<head>
+	<title> Binary Separations Grapher </title>
+	<link rel="stylesheet" href="../styles/stdStyle.css" />
+	<link rel="stylesheet" href="../styles/binaryGrapher.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap" />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+	<div class="main">
+
+		<div class="equalHorzDistrib">
+			<div>
+				<img class="icon" src="../images/headshot.png" />
+			</div>
+
+			<div>
+				<h1>
+					Distillation Grapher
+				</h1>
+
+				<div class="divider"></div>
+				
+				<p>
+					Uses Antoine's coefficients, and assumes ideal vapor / liquid to generate Txy, VLE, and distillation graphs.
+				</p>
+				<p>
+					Check out my other work and find me using the following:
+				</p>
+
+				<div class="sideBySide">
+					<div>
+						<a href="https://www.google.com" target="_blank">
+							<img class="small" src="../images/contact/email.png" />
+						</a>
+					</div>
+
+					<div>
+						<a href="https://github.com/isaacrez" target="_blank">
+							<img class="small" src="../images/contact/github.png" />
+						</a>
+					</div>
+
+					<div>
+						<a href="https://www.linkedin.com/in/isaac-rezey" target="_blank">
+							<img class="small" src="../images/contact/linkedIn.png" />
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="selectionBar">
+			<div>
+				<a href="../index.html">
+					Home
+				</a>
+			</div>
+			<div>
+				<a href="experience.html">
+						Skills
+				</a>
+			</div>
+			<div>
+				<a href="projects.html">
+					Projects
+				</a>
+			</div>
+			<div>
+				<a href="pastWork.html">
+					Past Work
+				</a>
+			</div>
+			<div>
+				<a href="volunteerWork.html">
+					Volunteer
+				</a>
+			</div>
+		</div>
+
+
+		<div id="title">
+			<h2 id="chartTitle">Chem 1 v. Chem 2</h2>
+			<h5>(Light v. Heavy)</h5>
+		</div>
+
+		<div class="overlapContainer">
+			<canvas id="myChart"></canvas>
+			<img src="../images/elroySeal.png" />
+		</div>
+
+		<div class="inputBar">
+			<p>R:</p>
+			<input id="R" type="number" min=0 max=50 step=0.01>
+			
+			<p>xB:</p>
+			<input id="xB" type="number" min=0 max=1 step=0.01>
+			
+			<p>xF:</p>
+			<input id="xF" type="number" min=0 max=1 step=0.01>
+			
+			<p>xD:</p>
+			<input id="xD" type="number" min=0 max=1 step=0.01>
+			
+			<p>&eta;:</p>
+			<input id="murphree" type="number" min=0 max=1 step=0.01>
+		</div>
+
+		<div class="inputBar">
+			<p class="single left">Chemicals:</p>
+			<select id="chemical_1">
+				<option value="water">Water</option>
+				<option value="n-butane">n-butane</option>
+				<option value="n-pentane">n-pentane</option>
+				<option value="n-hexane">n-hexane</option>
+				<option value="n-heptane">n-heptane</option>
+				<option value="n-octane">n-octane</option>
+				<option value="n-nonane">n-nonane</option>
+				<option value="n-decane">n-decane</option>
+				<option value="n-hexadecane">n-hexadecane</option>
+				<option value="benzene">Benzene</option>
+				<option value="toluene">Toluene</option>
+				<option value="ethylbenzene">Ethylbenzene</option>
+				<option value="1-propylbenzene">1-propylbenzene</option>
+				<option value="1-butylbenzene">1-butylbenzene</option>
+				<option value="methanol">Methanol</option>
+				<option value="ethanol">Ethanol</option>
+				<option value="1-propanol">1-propanol</option>
+				<option value="1-butanol">1-butanol</option>
+				<option value="1-pentanol">1-pentanol</option>
+				<option value="1-octanol">1-octanol</option>
+				<option value="1-lacticacid">Lactic Acid</option>
+				<option value="l-lactide">L-Lactide</option>
+			</select>
+
+			<select id="chemical_2">
+				<option value="water">Water</option>
+				<option value="n-butane">n-butane</option>
+				<option value="n-pentane">n-pentane</option>
+				<option value="n-hexane">n-hexane</option>
+				<option value="n-heptane">n-heptane</option>
+				<option value="n-octane">n-octane</option>
+				<option value="n-nonane">n-nonane</option>
+				<option value="n-decane">n-decane</option>
+				<option value="n-hexadecane">n-hexadecane</option>
+				<option value="benzene">Benzene</option>
+				<option value="toluene">Toluene</option>
+				<option value="ethylbenzene">Ethylbenzene</option>
+				<option value="1-propylbenzene">1-propylbenzene</option>
+				<option value="1-butylbenzene">1-butylbenzene</option>
+				<option value="methanol">Methanol</option>
+				<option value="ethanol">Ethanol</option>
+				<option value="1-propanol">1-propanol</option>
+				<option value="1-butanol">1-butanol</option>
+				<option value="1-pentanol">1-pentanol</option>
+				<option value="1-octanol">1-octanol</option>
+				<option value="1-lacticacid">Lactic Acid</option>
+				<option value="l-lactide">L-Lactide</option>
+			</select>
+
+			<p class="single left">Graph Type</p>
+			<select id="graphType">
+				<option value="distillation">Distillation</option>
+				<option value="VLE">VLE</option>
+				<option value="Txy">Txy</option>
+			</select>
+
+		</div>
+
+		<div class="outputDisplay">
+			<p >Optimal Feed Stage:</p>
+			<p id="feedStage">100</p>
+
+			<p class="single left">Optimal Stage Number:</p>
+			<p id="totalStages">100</p>
+		</div>
+
+	</div>
+
+	<script src="../binaryGrapher.js"></script>
+
+</body>
+
+</html>
