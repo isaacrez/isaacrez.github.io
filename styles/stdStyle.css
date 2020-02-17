@@ -1,0 +1,129 @@
+
+body {
+	background-color: black;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: Poppins, Arial, sans-serif;
+	color: rgb(80, 80, 220);
+
+	text-align: center;
+
+	line-height: 0;
+	padding: 0;
+}
+
+p {
+	font-family: Poppins, Arial, sans-serif;
+	color: lightblue;
+	font-weight: normal;
+
+	line-height: 1.2;
+	padding: 0;
+
+	text-align: left;
+	max-width: 300px;
+}
+
+div.main {
+	background-color: rgba(100, 100, 100, 0.25);
+	border-radius: 20px;
+
+	display: block;
+
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 20px;
+
+	width: 562px;
+}
+
+div.divider {
+	display: block;
+	margin: auto;
+
+	background-image: linear-gradient(90deg, transparent, blue, transparent);
+
+	padding: 0px;
+	height: 1px;
+}
+
+a > img:hover {
+	opacity: 0.25;
+}
+
+img.small {
+	height: 32px;
+	width: auto;
+}
+
+img.icon {
+	height: 200px;
+	width: auto;
+	border-radius: 25%;
+}
+
+/*
+	SIDE-BY-SIDE CONFIGURATION
+*/
+
+div.sideBySide {
+	display: flex;
+	justify-content: center;
+}
+
+div.sideBySide > div {
+	margin: auto;
+	margin-top: 5px;
+}
+
+div.equalHorzDistrib {
+	display: flex;
+	justify-content: center;
+}
+
+div.equalHorzDistrib > div {
+	margin: 10px 10px;
+	margin-bottom: 0px;
+}
+
+/*
+	SELECTION BAR CONFIGURATION
+*/
+
+div.selectionBar {
+	display: flex;
+	justify-content: center;
+
+	border-radius: 15px;
+	border-color: black;
+	border-width: 1px;
+
+	background-image: linear-gradient(black, transparent);
+}
+
+div.selectionBar > div {
+	border-radius: 10px;
+	background-color: transparent;
+
+	margin: 5px 5px;
+	padding: 2px 10px;
+
+	text-align: center;
+}
+
+div.selectionBar > div:hover {
+	background-color: rgba(100, 100, 100, 0.25);
+}
+
+div.selectionBar > div > a {
+	font-family: Poppins, Arial, sans-serif;
+	color: rgb(80, 80, 220);
+	font-weight: normal;
+
+	text-decoration: none;
+}
+
+div.selectionBar > div > a:hover {
+	color: rgba(200, 200, 200, 0.25);
+}
