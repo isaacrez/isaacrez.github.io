@@ -556,9 +556,9 @@ class Plotter {
 	}
 
 	addDistillationElements(objDistill) {
-		this.addPlotElement('Stages', objDistill.stepPts, 'green', true);
+		this.addPlotElement('Stages', objDistill.stepPts, 'white', true);
 		this.addPlotElement('Effective Eq.', objDistill.plottableEffectiveEq(), 'blue', true);
-		this.addPlotElement('OP line', objDistill.towerSpecs.getOperatingPoints(), 'grey');
+		this.addPlotElement('OP line', objDistill.towerSpecs.getOperatingPoints(), '#ADD8E6');
 	}
 
 	// TODO Add OperatingLinePlot
