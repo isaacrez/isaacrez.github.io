@@ -8,11 +8,13 @@ div.inputBar {
 div.inputBar > input {
 	margin: auto;
 	max-height: 30px;
+	max-width: 80px;
 }
 
 div.inputBar > select {
 	margin: auto;
 	max-height: 30px;
+	max-width: 120px;
 }
 
 div.outputDisplay {
